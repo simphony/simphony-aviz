@@ -11,7 +11,7 @@ from simphony.core.cuds_item import CUDSItem
 
 
 def show(dataset):
-    """ Show a CUDS container
+    """ Show a CUDS container.
 
     Parameters
     ----------
