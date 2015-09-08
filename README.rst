@@ -8,6 +8,10 @@ visualization support of the CUDS highlevel components.
   :target: https://travis-ci.org/simphony/simphony-aviz
   :alt: Build status
 
+.. image:: http://codecov.io/github/simphony/simphony-aviz.svg?branch=master
+  :target: http://codecov.io/github/simphony/simphony-aviz?branch=master
+    :alt: Test coverage
+
 
 Repository
 ----------
