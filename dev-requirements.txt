@@ -1,2 +1,4 @@
 flake8
 pyface
+traitsui
+mock
