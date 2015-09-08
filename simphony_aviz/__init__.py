@@ -1,3 +1,3 @@
-from .dummy import show
+from .show import show
 
 __all__ = ["show"]
