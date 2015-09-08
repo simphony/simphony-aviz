@@ -20,6 +20,12 @@ Requirements
 - Aviz  (https://github.com/simphony/Aviz)
 - simphony >= 0.2.0
 
+Optional requirements
+---------------------
+
+For testing of simphony-aviz, the following is required:
+- pyface
+
 Installation
 ------------
 
