@@ -2,11 +2,11 @@ SimPhoNy Plugin
 ===============
 
 AViz tools are available in the SimPhoNy library through the
-visualisation plug-in named ``aviz_tools``.
+visualisation plug-in named ``aviz``.
 
 e.g::
 
-  from simphony.visualisation import aviz_tools
+  from simphony.visualisation import aviz
 
   Visualizing CUDS
   ----------------
