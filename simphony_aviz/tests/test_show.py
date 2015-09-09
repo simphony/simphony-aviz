@@ -10,7 +10,13 @@ from simphony.cuds.mesh import Mesh
 from simphony.cuds.particles import Particles, Particle
 
 
-class TestShow(unittest.TestCase, GuiTestAssistant):
+class TestShow(GuiTestAssistant, unittest.TestCase):
+    def setUp(self):
+        GuiTestAssistant.setUp(self)
+
+    def tearDown(self):
+        GuiTestAssistant.tearDown(self)
+
     def test_particles_show(self):
         particles = Particles("test")
         random.seed(42)
