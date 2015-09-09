@@ -10,7 +10,11 @@ visualisation support of the CUDS highlevel components.
 
 .. image:: http://codecov.io/github/simphony/simphony-aviz.svg?branch=master
   :target: http://codecov.io/github/simphony/simphony-aviz?branch=master
-    :alt: Test coverage
+  :alt: Test coverage
+
+.. image:: https://readthedocs.org/projects/simphony-aviz?version=stable
+  :target: https://readthedocs.org/projects/simphony-aviz?badge=stable
+  :alt: Documentation Status
 
 
 Repository
