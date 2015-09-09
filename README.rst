@@ -1,8 +1,9 @@
+
 Simphony-Aviz 
 -------------
 
 A visualisation wrapper for the SimPhoNy-framework (http://www.simphony-project.eu/) to provide
-visualisation support of the CUDS highlevel components.
+visualisation support of the CUDS high-level components.
 
 .. image:: https://travis-ci.org/simphony/simphony-aviz.svg?branch=master
   :target: https://travis-ci.org/simphony/simphony-aviz
@@ -54,7 +55,7 @@ To run the full test-suite run::
 
  python -m unittest discover
 
-Usuage
+Usage
 ------
 After installation the user should be able to import the ``aviz`` visualisation plugin module by::
 

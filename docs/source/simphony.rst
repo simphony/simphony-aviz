@@ -8,10 +8,9 @@ e.g::
 
   from simphony.visualisation import aviz
 
-  Visualizing CUDS
-  ----------------
+Visualizing CUDS
+----------------
 
-  The :func:`~simphony_aviz.show.show` function is available to
-  visualise the `Particles` CUDS dataset. The function will open a
-  AViz and allow the user to view and analize the particles. 
-
+The :func:`~simphony_aviz.show.show` function is available to
+visualise the `Particles` CUDS dataset. The function will open a
+AViz and allow the user to view and analyze the particles. 
