@@ -1,38 +1,37 @@
 import unittest
 import random
-
-from pyface.ui.qt4.util.gui_test_assistant import GuiTestAssistant
-from pyface.ui.qt4.util.modal_dialog_tester import ModalDialogTester
+import multiprocessing
+import os
 
 from simphony_aviz.show import show
 from simphony.cuds.lattice import make_square_lattice
 from simphony.cuds.mesh import Mesh
 from simphony.cuds.particles import Particles, Particle
 
-
-class TestShow(GuiTestAssistant, unittest.TestCase):
-    def setUp(self):
-        GuiTestAssistant.setUp(self)
-
-    def tearDown(self):
-        GuiTestAssistant.tearDown(self)
-
+class TestShow(unittest.TestCase):
     def test_particles_show(self):
-        particles = Particles("test")
-        random.seed(42)
-        for i in range(0, 1000):
-            p = Particle(coordinates=(random.uniform(0.0, 10.0),
-                                      random.uniform(0.0, 10.0),
-                                      random.uniform(0.0, 10.0)))
-            particles.add_particles([p])
+        def run_show():
+            particles = Particles("test")
+            random.seed(42)
+            for i in range(0, 1000):
+                p = Particle(coordinates=(random.uniform(0.0, 10.0),
+                                          random.uniform(0.0, 10.0),
+                                          random.uniform(0.0, 10.0)))
+                particles.add_particles([p])
 
-        def function():
             show(particles)
-        return True
 
-        tester = ModalDialogTester(function)
-        tester.open_and_run(when_opened=lambda x: x.close(accept=False))
-        self.assertTrue(tester.result)
+        p = multiprocessing.Process(target=run_show)
+        p.daemon=True
+        p.start()
+        p.join(timeout=2)
+        self.assertTrue(p.is_alive())
+        p.terminate()
+        p.join()
+        # TODO: Killing aviz manually
+        # as descendant Aviz processes
+        # could not be terminated.
+        os.system("killall -y 5s aviz")
 
     def test_lattice_show(self):
         lattice = make_square_lattice(
