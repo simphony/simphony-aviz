@@ -10,12 +10,12 @@ from simphony.cuds.abc_mesh import ABCMesh
 from simphony.core.cuds_item import CUDSItem
 
 
-def show(dataset):
+def show(cuds):
     """ Show a CUDS container.
 
     Parameters
     ----------
-    dataset : {ABCMesh, ABCParticles, ABCLattice}
+    cuds : {ABCMesh, ABCParticles, ABCLattice}
         The CUDS dataset to be shown.
 
     Raises
@@ -24,16 +24,16 @@ def show(dataset):
         If the container type is not supported by the engine.
 
     """
-    if isinstance(dataset, ABCParticles):
+    if isinstance(cuds, ABCParticles):
         filename = "dummy.input"
         with _temp_particles_filename() as filename:
-            convert_particles_to_input_file(dataset, filename)
+            convert_particles_to_input_file(cuds, filename)
             subprocess.call(["aviz", filename])
-    elif isinstance(dataset, ABCLattice) or isinstance(dataset, ABCMesh):
+    elif isinstance(cuds, ABCLattice) or isinstance(cuds, ABCMesh):
         raise TypeError("Only Particles can be shown by AViz")
     else:
         msg = 'Provided object {} is not of any known cuds type'
-        raise TypeError(msg.format(type(dataset)))
+        raise TypeError(msg.format(type(cuds)))
 
 
 @contextlib.contextmanager
