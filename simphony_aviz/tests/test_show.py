@@ -8,6 +8,7 @@ from simphony.cuds.lattice import make_square_lattice
 from simphony.cuds.mesh import Mesh
 from simphony.cuds.particles import Particles, Particle
 
+
 class TestShow(unittest.TestCase):
     def test_particles_show(self):
         def run_show():
@@ -22,7 +23,7 @@ class TestShow(unittest.TestCase):
             show(particles)
 
         p = multiprocessing.Process(target=run_show)
-        p.daemon=True
+        p.daemon = True
         p.start()
         p.join(timeout=2)
         self.assertTrue(p.is_alive())
