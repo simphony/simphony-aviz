@@ -29,6 +29,12 @@ Requirements
 - Aviz  (https://github.com/simphony/Aviz)
 - simphony >= 0.2.0
 
+Optional Requirements
+---------------------
+
+For testing of simphony-aviz, the following is required:
+- PIL
+
 Installation
 ------------
 
@@ -51,9 +57,13 @@ To run the full test-suite run::
 
 Usage
 ------
-After installation the user should be able to import the ``aviz`` visualisation plugin module by::
+After installation the user should be able to import and use the ``aviz`` visualisation plugin module for
+visualizing with AViz::
 
   from simphony.visualisation import aviz
-    aviz.show(cuds)
+      aviz.show(my_particles)
 
+or to create snapshot with AViz::
 
+  from simphony.visualisation import aviz
+      aviz.snapshot(my_particles, "snapshot.png")

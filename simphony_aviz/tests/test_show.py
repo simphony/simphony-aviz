@@ -15,10 +15,10 @@ class TestShow(unittest.TestCase):
             particles = Particles("test")
             random.seed(42)
             for i in range(0, 1000):
-                p = Particle(coordinates=(random.uniform(0.0, 10.0),
-                                          random.uniform(0.0, 10.0),
-                                          random.uniform(0.0, 10.0)))
-                particles.add_particles([p])
+                particle = Particle(coordinates=(random.uniform(0.0, 10.0),
+                                                 random.uniform(0.0, 10.0),
+                                                 random.uniform(0.0, 10.0)))
+                particles.add_particles([particle])
 
             show(particles)
 
@@ -32,24 +32,26 @@ class TestShow(unittest.TestCase):
         # TODO: Killing aviz manually
         # as descendant Aviz processes
         # could not be terminated.
-        os.system("killall -y 5s aviz")
+        os.system("killall -y 3s aviz")
 
     def test_lattice_show(self):
         lattice = make_square_lattice(
             'test', 0.2, (10, 10), origin=(0.2, -2.4))
 
-        def function():
-            with self.assertRaises(ValueError):
-                show(lattice)
+        with self.assertRaises(TypeError):
+            show(lattice)
 
     def test_mesh_show(self):
         mesh = Mesh('test')
 
-        def function():
-            with self.assertRaises(ValueError):
-                show(mesh)
+        with self.assertRaises(TypeError):
+            show(mesh)
 
     def test_unknown_container(self):
         container = object()
         with self.assertRaises(TypeError):
             show(container)
+
+
+if __name__ == '__main__':
+    unittest.main()

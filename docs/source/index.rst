@@ -22,6 +22,7 @@ API Reference
    :maxdepth: 2
 
    api/show
+   api/snapshot
 
 
 

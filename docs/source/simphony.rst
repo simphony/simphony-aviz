@@ -11,6 +11,10 @@ e.g::
 Visualizing CUDS
 ----------------
 
-The :func:`~simphony_aviz.show.show` function is available to
+The :func:`~simphony_aviz.show` function is available to
 visualise the `Particles` CUDS dataset. The function will open a
 AViz and allow the user to view and analyze the particles. 
+
+The :func:`~simphony_aviz.snapshot` create a snapshot of
+the `Particles` CUDS dataset. The function will create a PNG image
+of dataset.

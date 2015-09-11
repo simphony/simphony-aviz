@@ -1,3 +1,4 @@
 from .show import show
+from .snapshot import snapshot
 
-__all__ = ["show"]
+__all__ = ["show", "snapshot"]
