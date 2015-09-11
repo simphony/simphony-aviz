@@ -27,7 +27,7 @@ def convert_particles_to_input_file(particles, filename):
             "{}\n".format(particles.count_of(CUDSItem.PARTICLE)))
         output_file.write("#XZYfile\n")
         for particle in particles.iter_particles():
-            dummy_type = "cc"
+            dummy_type = "X0"
             output_file.write(
                 "{0} {1[0]:.16e} {1[1]:.16e} {1[2]:.16e}\n".format(
                     dummy_type,
