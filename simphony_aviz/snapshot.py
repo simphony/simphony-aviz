@@ -1,12 +1,12 @@
 import os
 import shutil
-import subprocess
 
 from simphony.cuds.abc_particles import ABCParticles
 from simphony.cuds.abc_lattice import ABCLattice
 from simphony.cuds.abc_mesh import ABCMesh
 
-from simphony_aviz.util import (temp_particles_filename,
+from simphony_aviz.util import (run_aviz,
+                                temp_particles_filename,
                                 convert_particles_to_input_file)
 
 
@@ -29,7 +29,7 @@ def snapshot(cuds, filename):
     if isinstance(cuds, ABCParticles):
         with temp_particles_filename() as temp_xyz_filename:
             convert_particles_to_input_file(cuds, temp_xyz_filename)
-            subprocess.call(["aviz", temp_xyz_filename, "-snapq"])
+            run_aviz([temp_xyz_filename, "-snapq"])
             snapshot_dir = os.path.dirname(os.path.realpath(temp_xyz_filename))
             snapshot_file = _find_png(snapshot_dir)
             shutil.copyfile(snapshot_file, filename)
