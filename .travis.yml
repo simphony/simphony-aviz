@@ -26,6 +26,7 @@ install:
   - ./install_aviz.sh
   - export PATH=$PATH:$PWD/bin
   - pip install -r dev-requirements.txt
+  - pip install -r doc_requirements.txt
   - pip install git+https://github.com/simphony/simphony-common.git@${SIMPHONY_VERSION}#egg=simphony
   - python setup.py develop
 script:
