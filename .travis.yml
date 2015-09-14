@@ -32,7 +32,5 @@ script:
   - flake8 .
   - python -m unittest discover
 after_success:
-  - pip ins
-after_success:
   - pip install codecov
   - codecov
