@@ -3,3 +3,4 @@
 PIL
 flake8
 mock
+coverage
