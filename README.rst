@@ -9,12 +9,12 @@ visualisation support of the CUDS high-level components.
   :target: https://travis-ci.org/simphony/simphony-aviz
   :alt: Build status
 
-.. image:: http://codecov.io/github/simphony/simphony-aviz.svg?branch=master
+.. image:: http://codecov.io/github/simphony/simphony-aviz/coverage.svg?branch=master
   :target: http://codecov.io/github/simphony/simphony-aviz?branch=master
-  :alt: Test coverage
+  :alt: Coverage status
 
-.. image:: https://readthedocs.org/projects/simphony-aviz?version=stable
-  :target: https://readthedocs.org/projects/simphony-aviz?badge=stable
+.. image:: https://readthedocs.org/projects/simphony-aviz/badge/?version=master
+  :target: https://readthedocs.org/projects/simphony-aviz?badge=master
   :alt: Documentation Status
 
 
