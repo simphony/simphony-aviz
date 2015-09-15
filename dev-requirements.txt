@@ -1,0 +1,6 @@
+--allow-external PIL
+--allow-unverified PIL
+PIL
+flake8
+mock
+coverage

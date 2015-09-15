@@ -1,0 +1,38 @@
+sudo: false
+language: python
+python:
+  - "2.7"
+virtualenv:
+  system_site_packages: true
+env:
+  - SIMPHONY_VERSION=0.2.0
+  - SIMPHONY_VERSION=master
+matrix:
+  allow_failures:
+    - env: SIMPHONY_VERSION=master
+addons:
+  apt:
+    packages:
+    - python-qt4
+    - python-qt4-gl
+    - qt4-qmake
+    - qt4-dev-tools
+    - libpng-dev
+before_install:
+  - export DISPLAY=:99.0
+  - sh -e /etc/init.d/xvfb start
+  - export ETS_TOOLKIT=qt4
+install:
+  - ./install_aviz.sh
+  - export PATH=$PATH:$PWD/bin
+  - pip install -r dev-requirements.txt
+  - pip install -r doc_requirements.txt
+  - pip install git+https://github.com/simphony/simphony-common.git@${SIMPHONY_VERSION}#egg=simphony
+  - python setup.py develop
+script:
+  - flake8 .
+  - coverage run -m unittest discover
+  - python setup.py build_sphinx
+after_success:
+  - pip install codecov
+  - codecov
