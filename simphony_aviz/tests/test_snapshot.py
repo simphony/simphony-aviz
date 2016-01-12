@@ -6,10 +6,12 @@ import tempfile
 
 from PIL import Image
 
-from simphony_aviz.snapshot import snapshot
-from simphony.cuds.lattice import make_square_lattice
 from simphony.cuds.mesh import Mesh
 from simphony.cuds.particles import Particles, Particle
+
+from simphony_aviz.snapshot import snapshot
+from simphony_aviz.testing.utils import create_lattice
+
 
 
 class TestSnapshot(unittest.TestCase):
@@ -37,8 +39,7 @@ class TestSnapshot(unittest.TestCase):
         self.assertTrue(image.size[0] > 0 and image.size[1] > 0)
 
     def test_lattice_snapshot(self):
-        lattice = make_square_lattice(
-            'test', 0.2, (10, 10), origin=(0.2, -2.4))
+        lattice = create_lattice()
 
         with self.assertRaises(TypeError):
             snapshot(lattice, "fail.png")
