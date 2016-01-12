@@ -33,7 +33,7 @@ Optional Requirements
 ---------------------
 
 For testing of simphony-aviz, the following is required:
-- PIL
+- Pillow
 
 Installation
 ------------
