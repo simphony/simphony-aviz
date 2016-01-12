@@ -51,18 +51,18 @@ def temp_particles_filename():
     be destroyed after being used
     """
     temp_dir = tempfile.mkdtemp()
-    yield os.path.join(temp_dir, "particles.xzy")
+    yield os.path.join(temp_dir, "particles.xyz")
     shutil.rmtree(temp_dir)
 
 
 def convert_particles_to_input_file(particles, filename):
-    """ Convert particles dataset to a AViz file
+    """ Convert particles dataset to an AViz file
 
     """
     with open(filename, "w") as output_file:
         output_file.write(
             "{}\n".format(particles.count_of(CUDSItem.PARTICLE)))
-        output_file.write("#XZYfile\n")
+        output_file.write("#XYZfile\n")
         for particle in particles.iter_particles():
             dummy_type = "X0"
             output_file.write(
