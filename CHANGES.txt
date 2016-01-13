@@ -1,0 +1,8 @@
+SimPhoNy CHANGELOG
+======================
+
+Release 0.1.0
+-------------
+
+* Supports SimPhoNy visualization API of show and snapshot (only positions are visualized)
+* Supports simphony-common 0.2.x
