@@ -13,7 +13,6 @@ from simphony_aviz.snapshot import snapshot
 from simphony_aviz.testing.utils import create_lattice
 
 
-
 class TestSnapshot(unittest.TestCase):
     def setUp(self):
         self.temp_dir = tempfile.mkdtemp()

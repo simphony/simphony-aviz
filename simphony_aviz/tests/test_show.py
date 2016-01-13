@@ -9,6 +9,7 @@ from simphony.cuds.particles import Particles, Particle
 from simphony_aviz.show import show
 from simphony_aviz.testing.utils import create_lattice
 
+
 class TestShow(unittest.TestCase):
     def test_particles_show(self):
         def run_show():
