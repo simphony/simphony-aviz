@@ -3,10 +3,11 @@ import random
 import multiprocessing
 import os
 
-from simphony_aviz.show import show
-from simphony.cuds.lattice import make_square_lattice
 from simphony.cuds.mesh import Mesh
 from simphony.cuds.particles import Particles, Particle
+
+from simphony_aviz.show import show
+from simphony_aviz.testing.utils import create_lattice
 
 
 class TestShow(unittest.TestCase):
@@ -35,8 +36,7 @@ class TestShow(unittest.TestCase):
         os.system("killall -y 3s aviz")
 
     def test_lattice_show(self):
-        lattice = make_square_lattice(
-            'test', 0.2, (10, 10), origin=(0.2, -2.4))
+        lattice = create_lattice()
 
         with self.assertRaises(TypeError):
             show(lattice)

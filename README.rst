@@ -27,13 +27,13 @@ Requirements
 ------------
 
 - Aviz  (https://github.com/simphony/Aviz)
-- simphony >= 0.2.0
+- simphony >= 0.2.0,<0.3
 
 Optional Requirements
 ---------------------
 
 For testing of simphony-aviz, the following is required:
-- PIL
+- Pillow
 
 Installation
 ------------
