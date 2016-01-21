@@ -145,7 +145,7 @@ def convert_particles_to_input_file(particles, filename):
         if properties:
             names = []
             for attribute_info in properties:
-                names.extend([attribute_info.name
+                names.extend([{"name": attribute_info.name}
                               for _ in xrange(attribute_info.used_length)])
             output_file.write(yaml.dump({'properties': names},
                                         default_flow_style=False))
