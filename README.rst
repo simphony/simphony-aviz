@@ -37,6 +37,11 @@ Optional Requirements
 For testing of simphony-aviz, the following is required:
 - Pillow
 
+To support the documentation built you need the following packages:
+
+- sphinx >= 1.3.1
+- mock
+
 Installation
 ------------
 
