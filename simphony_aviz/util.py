@@ -112,10 +112,21 @@ def _determine_relevant_attributes(particles):
 def create_xyz_file(particles, filename):
     """ Convert particles dataset to an AViz file
 
-        If particles have CUBA attributes, maximum 8 of these
-        attributes are written to the file and a description
-        of these attributes is written to the end of the file.
-        Such files can only be read by AViz version >=6.6.
+    If particles have CUBA attributes, a maximum 8 of these
+    attributes are written to the file and a description
+    of these attributes is written to the end of the file.
+    Such files can only be read by AViz version >=6.6.
+
+    AViz properties are always of type float so only particle
+    attributes of float or integer are supported.  Attributes
+    of other types are ignored.
+
+    Parameters
+    ----------
+    particles : ABCParticles
+        The particles dataset to be written to file
+    filename : str
+        name of xyz file to be created
 
     """
     properties = _determine_relevant_attributes(particles)
