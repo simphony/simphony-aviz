@@ -23,7 +23,7 @@ API Reference
 
    api/show
    api/snapshot
-
+   api/util
 
 
 Indices and tables

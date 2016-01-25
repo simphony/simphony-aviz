@@ -30,7 +30,6 @@ The different attributes of the particles can be selected in AViz:
 
 .. figure:: _images/example_show_menu.png
 
-
 CUBA Attributes
 ----------------
 Aviz can show up to 8 properties. To determine which properties should be
@@ -45,3 +44,10 @@ integer or float are ignored.
 
 Once simphony-aviz determines which attributes it will display, it assumes
 that each particle in the dataset contains those attributes.
+
+Creating XYZ files
+----------------
+The ``simphony_aviz`` also provides a way to directly convert CUDS datasets
+to xyz input files for AViz:
+
+.. literalinclude:: ../../examples/write_xyz_file.py

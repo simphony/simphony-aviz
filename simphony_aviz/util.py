@@ -78,7 +78,7 @@ def _determine_relevant_attributes(particles):
 
     Returned list contains a list of attribute infos
     where the sum of the 'used_length' is less than or
-    equal to MAX_NUMBER_PROPERTIES.  Additionaly, all the attributes
+    equal to MAX_NUMBER_PROPERTIES.  Additionally, all the attributes
     are either int or float as we can convert them to a float
     value for the Aviz file.
 
@@ -109,7 +109,7 @@ def _determine_relevant_attributes(particles):
     return result
 
 
-def convert_particles_to_input_file(particles, filename):
+def create_xyz_file(particles, filename):
     """ Convert particles dataset to an AViz file
 
         If particles have CUBA attributes, maximum 8 of these
