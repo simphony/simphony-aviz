@@ -1,7 +1,6 @@
 
-# from simphony.visualisation import aviz
+from simphony.visualisation import aviz
 from simphony.cuds.particles import Particles, Particle
-from simphony_aviz.util import convert_particles_to_input_file
 from simphony.core.cuba import CUBA
 
 positions = [(1.0, 1.0, 1.0),
@@ -24,5 +23,5 @@ particles = [Particle(coordinates=positions[index],
 my_particles = Particles("test")
 my_particles.add_particles(particles)
 
-convert_particles_to_input_file(my_particles, "test.xyz")
-# aviz.show(my_particles)
+aviz.show(my_particles)
+aviz.snapshot(my_particles, "test.png")
