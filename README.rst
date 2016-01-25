@@ -58,9 +58,17 @@ or::
 Testing
 -------
 
-To run the full test-suite run::
+To run the full test-suite::
 
- python -m unittest discover
+  python -m unittest discover
+
+Documentation
+-------------
+
+To build the documentation::
+
+  python setup.py build_sphinx
+
 
 Usage
 ------
