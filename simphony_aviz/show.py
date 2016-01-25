@@ -3,7 +3,7 @@ from simphony.cuds.abc_lattice import ABCLattice
 from simphony.cuds.abc_mesh import ABCMesh
 
 from simphony_aviz.util import (temp_particles_filename,
-                                convert_particles_to_input_file,
+                                create_xyz_file,
                                 run_aviz)
 
 
@@ -23,7 +23,7 @@ def show(cuds):
     """
     if isinstance(cuds, ABCParticles):
         with temp_particles_filename() as filename:
-            convert_particles_to_input_file(cuds, filename)
+            create_xyz_file(cuds, filename)
             run_aviz(filename)
     elif isinstance(cuds, ABCLattice) or isinstance(cuds, ABCMesh):
         raise TypeError("Only Particles can be shown by AViz")

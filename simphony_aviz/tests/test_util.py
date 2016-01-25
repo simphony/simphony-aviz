@@ -8,5 +8,6 @@ class TestUtil(unittest.TestCase):
         with self.assertRaises(RuntimeError):
             run_aviz(aviz="dummy_aviz")
 
+
 if __name__ == '__main__':
     unittest.main()

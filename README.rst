@@ -28,12 +28,19 @@ Requirements
 
 - Aviz  (https://github.com/simphony/Aviz)
 - simphony >= 0.2.0,<0.3
+- pyyaml >= 3.11
+
 
 Optional Requirements
 ---------------------
 
 For testing of simphony-aviz, the following is required:
 - Pillow
+
+To support the documentation built you need the following packages:
+
+- sphinx >= 1.3.1
+- mock
 
 Installation
 ------------
@@ -51,9 +58,17 @@ or::
 Testing
 -------
 
-To run the full test-suite run::
+To run the full test-suite::
 
- python -m unittest discover
+  python -m unittest discover
+
+Documentation
+-------------
+
+To build the documentation::
+
+  python setup.py build_sphinx
+
 
 Usage
 ------

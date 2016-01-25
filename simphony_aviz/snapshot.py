@@ -7,7 +7,7 @@ from simphony.cuds.abc_mesh import ABCMesh
 
 from simphony_aviz.util import (run_aviz,
                                 temp_particles_filename,
-                                convert_particles_to_input_file)
+                                create_xyz_file)
 
 
 def snapshot(cuds, filename):
@@ -28,7 +28,7 @@ def snapshot(cuds, filename):
     """
     if isinstance(cuds, ABCParticles):
         with temp_particles_filename() as temp_xyz_filename:
-            convert_particles_to_input_file(cuds, temp_xyz_filename)
+            create_xyz_file(cuds, temp_xyz_filename)
             run_aviz([temp_xyz_filename, "-snapq"])
             snapshot_dir = os.path.dirname(os.path.realpath(temp_xyz_filename))
             snapshot_file = _find_png(snapshot_dir)

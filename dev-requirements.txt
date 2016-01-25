@@ -2,3 +2,4 @@ Pillow
 flake8
 mock
 coverage
+pyyaml >= 3.11
