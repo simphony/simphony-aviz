@@ -30,7 +30,6 @@ Requirements
 - simphony >= 0.2.0,<0.3
 - pyyaml >= 3.11
 
-
 Optional Requirements
 ---------------------
 
