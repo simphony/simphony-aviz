@@ -1,6 +1,12 @@
 SimPhoNy CHANGELOG
 ======================
 
+Release 0.2.0
+-------------
+
+* Display CUBA attributes on particles (#8)
+* Add images and examples to documentation/manual (#7)
+
 Release 0.1.0
 -------------
 
