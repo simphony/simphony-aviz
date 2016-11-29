@@ -61,6 +61,7 @@ def temp_particles_filename():
     yield os.path.join(temp_dir, "particles.xyz")
     shutil.rmtree(temp_dir)
 
+
 # Attributes need to be either a float or integer
 # so that they can be displayed in AViz.
 _SUPPORTED_TYPES = [numpy.float64, numpy.int32]
