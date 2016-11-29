@@ -8,6 +8,8 @@ env:
   - SIMPHONY_VERSION=0.2.0
   - SIMPHONY_VERSION=0.2.1
   - SIMPHONY_VERSION=0.2.2
+  - SIMPHONY_VERSION=0.3.0
+  - SIMPHONY_VERSION=8ed81d91dbee89dbdf4a76d55d9b7f92bce773e7
   - SIMPHONY_VERSION=master
 matrix:
   allow_failures:
