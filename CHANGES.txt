@@ -1,6 +1,12 @@
 SimPhoNy CHANGELOG
 ======================
 
+Release 0.2.2
+-------------
+
+* Release built and tested against 0.4.0 simphony-common
+
+
 Release 0.2.0
 -------------
 
