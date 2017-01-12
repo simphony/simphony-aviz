@@ -86,7 +86,7 @@ def _determine_relevant_attributes(particles):
     result = []
     used_keys = []
     number_properties = 0
-    for particle in particles.iter_particles():
+    for particle in particles.iter(item_type=CUBA.PARTICLE):
         data = particle.data
         for key in data:
             keyword = KEYWORDS[CUBA(key).name]
