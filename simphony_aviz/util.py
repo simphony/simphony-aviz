@@ -135,7 +135,7 @@ def create_xyz_file(particles, filename):
         output_file.write(
             "{}\n".format(particles.count_of(CUBA.PARTICLE)))
         output_file.write("#XYZfile\n")
-        for particle in particles.iter_particles():
+        for particle in particles.iter(item_type=CUBA.PARTICLE):
             dummy_type = "X0"
             line = "{0} {1[0]:.16e} {1[1]:.16e} {1[2]:.16e}".format(
                     dummy_type,

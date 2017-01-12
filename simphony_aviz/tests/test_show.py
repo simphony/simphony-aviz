@@ -19,7 +19,7 @@ class TestShow(unittest.TestCase):
                 particle = Particle(coordinates=(random.uniform(0.0, 10.0),
                                                  random.uniform(0.0, 10.0),
                                                  random.uniform(0.0, 10.0)))
-                particles.add_particles([particle])
+                particles.add([particle])
 
             show(particles)
 
