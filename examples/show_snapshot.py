@@ -21,7 +21,7 @@ particles = [Particle(coordinates=positions[index],
              for index, position in enumerate(positions)]
 
 my_particles = Particles("test")
-my_particles.add_particles(particles)
+my_particles.add(particles)
 
 aviz.show(my_particles)
 aviz.snapshot(my_particles, "test.png")

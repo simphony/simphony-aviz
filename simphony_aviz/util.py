@@ -10,7 +10,6 @@ from collections import namedtuple
 from itertools import islice
 
 from simphony.core.cuba import CUBA
-from simphony.core.cuds_item import CUDSItem
 from simphony.core.keywords import KEYWORDS
 
 
@@ -134,7 +133,7 @@ def create_xyz_file(particles, filename):
 
     with open(filename, "w") as output_file:
         output_file.write(
-            "{}\n".format(particles.count_of(CUDSItem.PARTICLE)))
+            "{}\n".format(particles.count_of(CUBA.PARTICLE)))
         output_file.write("#XYZfile\n")
         for particle in particles.iter_particles():
             dummy_type = "X0"
