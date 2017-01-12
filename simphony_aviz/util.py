@@ -10,7 +10,6 @@ from collections import namedtuple
 from itertools import islice
 
 from simphony.core.cuba import CUBA
-from simphony.core.cuds_item import CUDSItem
 from simphony.core.keywords import KEYWORDS
 
 
@@ -87,7 +86,7 @@ def _determine_relevant_attributes(particles):
     result = []
     used_keys = []
     number_properties = 0
-    for particle in particles.iter_particles():
+    for particle in particles.iter(item_type=CUBA.PARTICLE):
         data = particle.data
         for key in data:
             keyword = KEYWORDS[CUBA(key).name]
@@ -134,9 +133,9 @@ def create_xyz_file(particles, filename):
 
     with open(filename, "w") as output_file:
         output_file.write(
-            "{}\n".format(particles.count_of(CUDSItem.PARTICLE)))
+            "{}\n".format(particles.count_of(CUBA.PARTICLE)))
         output_file.write("#XYZfile\n")
-        for particle in particles.iter_particles():
+        for particle in particles.iter(item_type=CUBA.PARTICLE):
             dummy_type = "X0"
             line = "{0} {1[0]:.16e} {1[1]:.16e} {1[2]:.16e}".format(
                     dummy_type,
