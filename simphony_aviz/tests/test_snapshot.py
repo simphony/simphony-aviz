@@ -29,7 +29,7 @@ class TestSnapshot(unittest.TestCase):
             p = Particle(coordinates=(random.uniform(0.0, 10.0),
                                       random.uniform(0.0, 10.0),
                                       random.uniform(0.0, 10.0)))
-            particles.add_particles([p])
+            particles.add([p])
 
         snapshot(particles, self.filename)
         self.assertTrue(os.path.exists(self.filename))
