@@ -27,7 +27,7 @@ Requirements
 ------------
 
 - Aviz  (https://github.com/simphony/Aviz)
-- simphony >= 0.2.0,<0.3
+- simphony ~= 0.5
 - pyyaml >= 3.11
 
 Optional Requirements
