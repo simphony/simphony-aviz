@@ -33,5 +33,5 @@ setup(
     entry_points={
         'simphony.visualisation': ['aviz = simphony_aviz']},
     packages=find_packages(),
-    install_requires=["simphony~=0.5"]
+    install_requires=["simphony>=0.5"]
     )
